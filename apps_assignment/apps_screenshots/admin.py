@@ -1,0 +1,5 @@
+from django.contrib import admin
+from .models import Apps,Screenshots
+# Register your models here.
+admin.site.register(Apps)
+admin.site.register(Screenshots)
