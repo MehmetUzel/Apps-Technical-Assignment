@@ -8,8 +8,14 @@ class Apps(models.Model):
     created_at = models.DateTimeField(auto_now_add=True) # I assume that this field should be entered automatically.
     updated_at = models.DateTimeField(auto_now=True) # This one also changed automatically when model updated.
 
+    def __str__(self):
+        return self.name
+
 class Screenshots(models.Model):
     app_id = models.ForeignKey(Apps, on_delete=models.CASCADE) #Decide deletion model in future
     file_name = models.ImageField(upload_to= 'images/', max_length=1000)
     created_at = models.DateTimeField(auto_now_add=True) # I assume that this field should be entered automatically.
     updated_at = models.DateTimeField(auto_now=True) # This one also changed automatically when model updated.
+
+    def __str__(self):
+        return (self.app_id.name + "\'s  " + str(self.file_name) )
