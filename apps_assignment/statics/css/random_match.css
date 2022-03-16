@@ -83,3 +83,7 @@
     padding: 1rem 1rem;
     vertical-align: middle;
   }
+  .responsive {
+    width: 50%;
+    height: auto;
+  }

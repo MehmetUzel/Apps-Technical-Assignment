@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps_screenshots.apps.AppsScreenshotsConfig',
     'user.apps.UserConfig',
+    'webp_converter.apps.WebpConverterConfig',
     'crispy_forms',
     'bootstrap4'
 ]
