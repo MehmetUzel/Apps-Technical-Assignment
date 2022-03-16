@@ -12,9 +12,6 @@ def get_random(exclude):
     max_id = Apps.objects.all().aggregate(max_id = Max("id"))['max_id']
     while True:
         pk = random.randint(1,max_id)
-        print(type(pk))
-        print(type(exclude))
-        print(pk != int(exclude))
         if pk != int(exclude) :
             screenshots = Screenshots.objects.filter(app_id = pk)
             if screenshots:
@@ -31,7 +28,6 @@ def get_screenshot(response):
     if response.method == 'POST':
         app_name = response.POST.get('app_name')
         screenshots = Screenshots.objects.filter(app_id = app_name)
-        print(app_name)
         if not screenshots.exists():
             return JsonResponse({'status':'error'})
     
