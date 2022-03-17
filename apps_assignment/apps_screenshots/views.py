@@ -21,7 +21,6 @@ def get_random(exclude):
 # Create your views here.
 def random_match(response):
     ls = Apps.objects.all()
-    lsc = Apps.objects.get(id=1)
     return render(response,"apps_screenshots/random_match.html", {"ls":ls})
 
 def get_screenshot(response):
