@@ -18,4 +18,4 @@ class Screenshots(models.Model):
     updated_at = models.DateTimeField(auto_now=True) # This one also changed automatically when model updated.
 
     def __str__(self):
-        return (self.app_id.name + "\'s  " + str(self.file_name) )
+        return (self.app_id.name + "\'s  " +"photo" )
